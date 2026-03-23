@@ -1,0 +1,24 @@
+[project]
+name = "auth-service"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Kirill67tyar",email = "kirillbogomolov.ric@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "djangorestframework (>=3.17.0,<4.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.0.2"
+pytest-cov = "^7.1.0"
+
+[tool.poetry]
+packages = [{ include = "auth_service" }]
