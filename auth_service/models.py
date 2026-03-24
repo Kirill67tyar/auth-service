@@ -27,7 +27,7 @@ class BusinessElement(NameDescriptionMixin, TimeStampedMixin):
         return self.name
 
 
-class AccessRoleRule(models.Model, TimeStampedMixin):
+class AccessRoleRule(TimeStampedMixin, models.Model):
     """Правила доступа: какая роль что может делать с каким элементом"""
 
     role = models.ForeignKey(
@@ -74,7 +74,7 @@ class AccessRoleRule(models.Model, TimeStampedMixin):
         return self.pk
 
 
-class User(models.Model, TimeStampedMixin):
+class User(TimeStampedMixin, models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     patronymic = models.CharField(max_length=100, blank=True, null=True)

@@ -1,0 +1,192 @@
+[
+  {
+    "model": "auth_service.role",
+    "pk": 1,
+    "fields": {
+      "name": "admin",
+      "description": "Владеет полными правами.",
+      "created": "2026-03-24T15:48:08.931Z",
+      "modified": "2026-03-24T15:48:08.931Z"
+    }
+  },
+  {
+    "model": "auth_service.role",
+    "pk": 2,
+    "fields": {
+      "name": "manager",
+      "description": "Владеет расширенными правами.",
+      "created": "2026-03-24T15:51:45.091Z",
+      "modified": "2026-03-24T15:51:45.091Z"
+    }
+  },
+  {
+    "model": "auth_service.role",
+    "pk": 3,
+    "fields": {
+      "name": "user",
+      "description": "Владеет правами изменять свои данные.",
+      "created": "2026-03-24T15:52:18.167Z",
+      "modified": "2026-03-24T15:52:18.167Z"
+    }
+  },
+  {
+    "model": "auth_service.role",
+    "pk": 4,
+    "fields": {
+      "name": "guest",
+      "description": "Владеет правами только на чтение.",
+      "created": "2026-03-24T15:52:40.594Z",
+      "modified": "2026-03-24T15:52:40.594Z"
+    }
+  },
+  {
+    "model": "auth_service.businesselement",
+    "pk": 1,
+    "fields": {
+      "name": "users",
+      "description": "Управление пользователями",
+      "created": "2026-03-24T18:57:42.386Z",
+      "modified": "2026-03-24T18:57:42.386Z"
+    }
+  },
+  {
+    "model": "auth_service.businesselement",
+    "pk": 2,
+    "fields": {
+      "name": "products",
+      "description": "Товары",
+      "created": "2026-03-24T18:57:42.416Z",
+      "modified": "2026-03-24T18:57:42.416Z"
+    }
+  },
+  {
+    "model": "auth_service.businesselement",
+    "pk": 3,
+    "fields": {
+      "name": "orders",
+      "description": "Заказы",
+      "created": "2026-03-24T18:57:42.420Z",
+      "modified": "2026-03-24T18:57:42.420Z"
+    }
+  },
+  {
+    "model": "auth_service.businesselement",
+    "pk": 4,
+    "fields": {
+      "name": "stores",
+      "description": "Магазины",
+      "created": "2026-03-24T18:57:42.422Z",
+      "modified": "2026-03-24T18:57:42.423Z"
+    }
+  },
+  {
+    "model": "auth_service.businesselement",
+    "pk": 5,
+    "fields": {
+      "name": "access_rules",
+      "description": "Правила доступа",
+      "created": "2026-03-24T18:57:42.425Z",
+      "modified": "2026-03-24T18:57:42.425Z"
+    }
+  },
+  {
+    "model": "auth_service.accessrolerule",
+    "pk": 1,
+    "fields": {
+      "created": "2026-03-24T19:00:40.431Z",
+      "modified": "2026-03-24T19:00:40.431Z",
+      "role": 1,
+      "element": 1,
+      "read_permission": true,
+      "read_all_permission": true,
+      "create_permission": true,
+      "update_permission": true,
+      "update_all_permission": true,
+      "delete_permission": true,
+      "delete_all_permission": true
+    }
+  },
+  {
+    "model": "auth_service.accessrolerule",
+    "pk": 2,
+    "fields": {
+      "created": "2026-03-24T19:00:40.446Z",
+      "modified": "2026-03-24T19:00:40.446Z",
+      "role": 1,
+      "element": 2,
+      "read_permission": true,
+      "read_all_permission": true,
+      "create_permission": true,
+      "update_permission": true,
+      "update_all_permission": true,
+      "delete_permission": true,
+      "delete_all_permission": true
+    }
+  },
+  {
+    "model": "auth_service.accessrolerule",
+    "pk": 3,
+    "fields": {
+      "created": "2026-03-24T19:00:40.451Z",
+      "modified": "2026-03-24T19:00:40.451Z",
+      "role": 1,
+      "element": 3,
+      "read_permission": true,
+      "read_all_permission": true,
+      "create_permission": true,
+      "update_permission": true,
+      "update_all_permission": true,
+      "delete_permission": true,
+      "delete_all_permission": true
+    }
+  },
+  {
+    "model": "auth_service.accessrolerule",
+    "pk": 4,
+    "fields": {
+      "created": "2026-03-24T19:00:40.455Z",
+      "modified": "2026-03-24T19:00:40.455Z",
+      "role": 1,
+      "element": 4,
+      "read_permission": true,
+      "read_all_permission": true,
+      "create_permission": true,
+      "update_permission": true,
+      "update_all_permission": true,
+      "delete_permission": true,
+      "delete_all_permission": true
+    }
+  },
+  {
+    "model": "auth_service.accessrolerule",
+    "pk": 5,
+    "fields": {
+      "created": "2026-03-24T19:00:40.461Z",
+      "modified": "2026-03-24T19:00:40.461Z",
+      "role": 1,
+      "element": 5,
+      "read_permission": true,
+      "read_all_permission": true,
+      "create_permission": true,
+      "update_permission": true,
+      "update_all_permission": true,
+      "delete_permission": true,
+      "delete_all_permission": true
+    }
+  },
+  {
+    "model": "auth_service.user",
+    "pk": 1,
+    "fields": {
+      "created": "2026-03-24T19:01:14.294Z",
+      "modified": "2026-03-24T19:01:14.294Z",
+      "first_name": "Админ",
+      "last_name": "Тестовый",
+      "patronymic": null,
+      "email": "admin@example.com",
+      "password": "$2b$12$6qUWTRuChQs9KWaMxMD23eP8T2B7cqZpxQH7Q7xfpwoaK8bWnAGYi",
+      "role": 1,
+      "is_active": true
+    }
+  }
+]
