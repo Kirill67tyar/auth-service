@@ -2,6 +2,7 @@ __pycache__/
 *.pyc
 .vscode
 .venv
+.env
 .DS_Store
 draft/
 .pytest_cache

@@ -1,24 +1,33 @@
 [project]
 name = "auth-service"
 version = "0.1.0"
-description = ""
+description = "Собственная система аутентификации и авторизации"
 authors = [
-    {name = "Kirill67tyar",email = "kirillbogomolov.ric@gmail.com"}
+    {name = "Kirill67tyar", email = "kirillbogomolov.ric@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = [
-    "djangorestframework (>=3.17.0,<4.0.0)"
-]
 
-
-[build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+[tool.poetry.dependencies]
+python = "^3.12"
+Django = "6.0"
+djangorestframework = "3.17.0"
+psycopg = { extras = ["binary"], version = "^3.2" }
+python-dotenv = "^1.0.1"
+bcrypt = "^4.2.0"
+PyJWT = "^2.9.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^9.0.2"
+pytest-django = "^4.9.0"      # очень важно добавить!
 pytest-cov = "^7.1.0"
+ruff = "^0.9"
 
 [tool.poetry]
 packages = [{ include = "auth_service" }]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+python_files = ["test_*.py", "*_test.py"]
+addopts = "--reuse-db -v --cov=auth_service --cov-report=term-missing"
+testpaths = ["tests", "auth_service"]
