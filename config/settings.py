@@ -96,12 +96,18 @@ STATIC_URL = "static/"
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
-        "rest_framework.authentication.SessionAuthentication",  # пока оставим сессии, позже добавим JWT
+        "auth_service.authentication.JWTAuthentication",
     ],
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.IsAuthenticated",
     ],
     "DEFAULT_RENDERER_CLASSES": [
         "rest_framework.renderers.JSONRenderer",
+        "rest_framework.renderers.BrowsableAPIRenderer",
     ],
 }
+
+# Опционально: чтобы можно было тестировать в браузере
+REST_FRAMEWORK["DEFAULT_AUTHENTICATION_CLASSES"].append(
+    "rest_framework.authentication.SessionAuthentication"
+)
