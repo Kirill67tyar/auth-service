@@ -6,3 +6,6 @@ migrate:
 
 loaddata:
 	poetry run python manage.py loaddata seed.json
+
+runserver:
+	poetry run python manage.py runserver

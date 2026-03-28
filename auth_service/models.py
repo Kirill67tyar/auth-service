@@ -94,3 +94,13 @@ class User(TimeStampedMixin, models.Model):
 
     def __str__(self):
         return f"{self.pk} {self.email}"
+
+
+class Product(NameDescriptionMixin, models.Model):
+    owner = models.ForeignKey(
+        to=User, related_name="products", on_delete=models.SET_NULL, null=True
+    )
+
+    class Mets:
+        verbose_name = "Продукт"
+        verbose_name_plural = "Продукты"
